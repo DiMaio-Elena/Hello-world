@@ -85,3 +85,42 @@ x = "awesome"
 def myfunc():
   print("Python is " + x)
 myfunc()
+
+
+#creo una variabile x assegnandole il valore awesome, inoltre all'interno della funzione definisco nuovamente x.
+#se stampo la x all'interno della funzione ottengo il valore assegnato all'interno della funzione
+#se stampo la x fuoir dalla funzione stampo il valore iniziale
+#le variabili dunque definite all'interno della funzioni sono locali e non modificano quelle esterne
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+
+
+
+#definisco la variabile x all'interno della funzione, assegnandole anche la parola chiave global. 
+# la variabile pur essendo all'interno della variabile è resa esterna
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
+#definisco la variabile prima all'esterno della funzione poi la medesima all'interno di myfunc utilizzando la parola chiave global, dunque le modifiche sono anche esterne
+#quando stampo la variabile il valore è quello modificato nella funzione
+x = "awesome"
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
