@@ -9,3 +9,4 @@ for x in casuale :
     if x>50 or x<10 :
         print(x)
 valore=valore+1
+print(valore)
